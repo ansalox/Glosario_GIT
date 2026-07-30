@@ -527,6 +527,8 @@ git push -u origin main
 
 ---
 
+
+
 ## Trabajo diario
 
 ```text
@@ -550,3 +552,11 @@ git commit -m "Descripción del cambio"
      ▼
 git push
 ```
+
+## MERGE
+git fetch --all
+git pull --all
+
+for remote in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin | grep -v '^origin/HEAD$'); do
+    git branch --track "${remote#origin/}" "$remote" 2>/dev/null || true
+done
