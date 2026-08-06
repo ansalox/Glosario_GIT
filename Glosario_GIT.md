@@ -554,6 +554,7 @@ git push
 ```
 
 ## MERGE
+Actualizar todas las ramas
 ```
 git fetch --all
 ```
