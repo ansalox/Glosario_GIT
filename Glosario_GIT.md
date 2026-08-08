@@ -561,7 +561,7 @@ git fetch --all
 ```
 git pull --all
 ```
-Descargar todas las ramas remotas
+Descargar todas las ramas remotas luego repetir el git fetch -all
 ```
 for remote in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin | grep -v '^origin/HEAD$'); do
     git branch --track "${remote#origin/}" "$remote" 2>/dev/null || true
